@@ -391,3 +391,185 @@ img {
   letter-spacing: 1px;
 }
 
+.site-description {
+  margin: 15px auto;
+  color: $base-lighten-color;
+  font-size: 16px;
+
+  @include mobile {
+    margin: 10px auto;
+  }
+}
+
+.navlist{
+  text-align:center;
+}
+
+nav {
+  display: block;
+  margin-top: 23px; // @TODO: Vertically middle align
+  font-family: $base-font;
+  font-weight: 500;
+  font-size: 18px;
+
+  @include mobile {
+    margin-top: 9px;
+    font-size: 16px;
+  }
+
+  a {
+    margin: 0 10px;
+    text-align: right;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+    @include mobile {
+      margin: 0 10px;
+      color: $link-color;
+    }
+  }
+}
+
+// content
+
+.wrapper-content {
+  float: right;
+  width: 76.3932%;
+
+  @include mobile {
+    float: none;
+    width: 100%;
+  }
+}
+
+// Posts
+
+.posts{
+
+  .tag {
+    display: inline;
+    font-weight: 300;
+    font-size: $small-font-size;
+
+    li:before {
+      content: '';
+    }
+
+    li {
+      display: inline;
+      margin: 0;
+
+      > a {
+        margin: 3px 3px 3px 0;
+        padding: .5px 4px;
+        color: $base-color;
+        background-color: $tag-index-label-background-color;
+        border-radius: 3px;
+
+        &:hover {
+          color: $link-color;
+          background-color:$link-bghv-color;
+        }
+      }
+    }
+  }
+}
+
+.posts > .post {
+  padding-bottom: 2em;
+  border-bottom: 1px solid $divider-color;
+}
+
+.posts > .post:last-child {
+  padding-bottom: 1em;
+  border-bottom: none;
+}
+
+
+.pinned .feather-anchor {
+  color: $base-lighten-color;
+  padding: 2px;
+  margin-right: 8px;
+}
+
+
+.date {
+  font-weight: 300;
+  font-size: $small-font-size;
+  color: $base-lighten-color;
+  margin-right: 4px;
+}
+
+.author{
+  font-weight:700;
+  font-size:$small-font-size;
+  color: $base-lighten-color;
+  margin-right: 4px;
+}
+
+
+.post {
+
+  h1 {
+    margin-bottom: .1em;
+  }
+
+
+  .comments {
+    margin-top: 10px;
+  }
+
+  .read-more {
+    font-size: 15px;
+  }
+}
+
+.page {
+//  margin: 40px;
+
+  @include mobile {
+//    margin: 24px;
+  }
+}
+
+// TOC
+
+.toc {
+/*  width: 240px;*/
+    width: 14.5898%;
+  height: 100%;
+  left: 23.6068%;
+  position: fixed;
+  z-index: 4;
+  padding: 60px 20px 0 20px;
+  overflow-y: auto;
+  
+  &:before{
+    content:"目录";
+    margin: 0 0 1em 1em;
+    font-weight: 700;
+    font-size: 1.2em;
+    display: block;
+    padding-bottom: 0.6em;
+    border-bottom: 3px double $divider-color;
+  }
+
+  li:before{
+    content:"";
+  }
+
+  @include mobile{
+    display:none;
+  }
+}
+
+@media screen and (max-width:2200px) and (min-width:1200px){
+  .withtoc{
+    padding-left: 14.5898%;
+  }
+  .withtoc > .container {
+      margin: 0;
+      padding-right: 14.5898%;
+  }
+}
+
