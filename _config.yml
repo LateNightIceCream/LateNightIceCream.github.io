@@ -17,20 +17,44 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+name:        Richard Grünert
+description: EE student from Germany
+
+avatar: https://66.media.tumblr.com/29a24d7907388a65f39edc69ddd33a37/tumblr_nb6t3fgH9v1txe8seo1_500.gifv
+
+baseurl: ""
+
+#footer-text: yay
+navigation:
+  - name: <ion-icon name="planet-outline"></ion-icon>
+    url: /
+  - name: <ion-icon name="information-outline"></ion-icon>
+    url: /about
+#  - name: <ion-icon name="cube-outline"></ion-icon>
+  - name: <ion-icon name="library-outline"></ion-icon>
+    url: /archive
+  - name: <ion-icon name="pricetags-outline"></ion-icon>
+    url: /tags
+
+paginate: 8
+excerpt_separator: <!-- more -->
+footer-links:
+  github: LateNightIceCream
+  email:  richardgruenert@live.com
 
 title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
+
+#paginate_path: /page:num/
+
+#description: >- # this means to ignore newlines until "baseurl:"
+#  Write an awesome description for your new site here. You can edit this
+#  line in _config.yml. It will appear in your document head meta (for
+#  Google search results) and in your feed.xml site description.
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  LateNightIceCream
 
 # Build settings
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
 
