@@ -573,3 +573,116 @@ nav {
   }
 }
 
+// pagination
+
+.pagination {
+  border-top: 1px solid $divider-color;
+  font-weight: 300;
+  padding: 40px 0;
+  width: 100%;
+  display: inline-block;
+
+  @include mobile {
+    font-size: $small-font-size;
+    padding: 24px 0;
+  }
+
+  > .prev {
+    float: left;
+    width: 50%;
+    a {
+      color: $base-lighten-color;
+      border: 1px solid $divider-color;
+      padding: 10px 20px;
+      background: $background-color;
+
+      &:hover, &:focus {
+        color: $link-lighten-color;
+        border: 1px solid $link-lighten-color;
+        background-color: $link-bghv-color;
+      }
+    }
+  }
+
+  > .next {
+    float: right;
+    text-align: right;
+    width: 50%;
+    a {
+      color: $base-lighten-color;
+      border: 1px solid $divider-color;
+      padding: 10px 20px;
+      background: $background-color;
+
+      &:hover, &:focus {
+        color: $link-lighten-color;
+        border: 1px solid $link-lighten-color;
+        background-color: $link-bghv-color;
+      }
+    }
+  }
+}
+
+// Archive
+.archive {
+  a {
+    color: $base-color;
+  }
+  time {
+    color: $base-lighten-color;
+    font-size: $small-font-size;
+    font-weight: 300;
+    margin-left: 3px;
+  }
+}
+
+// Tags
+.tags > .label {
+  > li:before {
+    content: "";
+  }
+
+  > li {
+    margin: 0;
+    font-size: $small-font-size;
+    font-weight: 300;
+    display: inline;
+
+    > a {
+      display: inline-block;
+      margin: 1px;
+      color: $base-color;
+      background-color: $tag-index-label-background-color;
+      border-radius: 3px;
+
+      &:hover {
+        background-color: $link-bghv-color;
+      }
+
+      span {
+        float: left;
+        padding: .5px 5px;
+
+        &.count {
+          background-color: $tag-index-count-background-color;
+          border-radius: 0 3px 3px 0;
+
+        }
+      }
+    }
+  }
+}
+
+.tags > .tag {
+  a {
+    color: $base-color;
+  }
+  time {
+    color: $base-lighten-color;
+    font-size: $small-font-size;
+    font-weight: 300;
+    margin-left: 3px;
+  }
+}
+
+
