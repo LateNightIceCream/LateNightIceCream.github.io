@@ -27,11 +27,8 @@ body {
 
 .container {
   margin: 0 auto;
- /* max-width: 1000px;*/
-  padding-left: 20px;
-/*  padding-right: 14.5898%;*/
-  padding-right: calc(20px + 9.017% + 14.5808%);
-  margin-left: 9.017%;
+  max-width: 1000px;
+  padding: 0 20px;
   width: 100%;
 }
 
@@ -323,7 +320,7 @@ img {
 //
 
 .wrapper-sidebar {
-  width: 23.6068%;
+  width: 30%;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-color: $background-color;
@@ -345,8 +342,7 @@ img {
 }
 
 .sidebar {
-  padding-bottom: 20px;
-  padding-top:    14.5898vh;
+  padding: 20px 0;
 
   @include mobile {
     text-align: center;
@@ -355,7 +351,7 @@ img {
 
 .site-info {
   text-align:center;
-  margin: 0 auto 0;
+  margin: 100px auto 0;
 
   @include mobile {
     float: none;
@@ -366,8 +362,8 @@ img {
   .site-avatar {
     margin:0 auto;
     display: block;
-    width: 38.1966%;
-    height: 38.1966%;
+    max-width: 200px;
+    max-height: 200px;
 
     @include mobile {
       max-width: 120px;
@@ -376,7 +372,7 @@ img {
 
     img {
       display: inline-block;
-      border-radius: 50%;
+      border-radius: 2px;
     }
   }
 }
@@ -434,7 +430,7 @@ nav {
 
 .wrapper-content {
   float: right;
-  width: 76.3932%;
+  width: 70%;
 
   @include mobile {
     float: none;
@@ -535,10 +531,9 @@ nav {
 // TOC
 
 .toc {
-/*  width: 240px;*/
-    width: 14.5898%;
+  width: 240px;
   height: 100%;
-  left: 23.6068%;
+  left: 30%;
   position: fixed;
   z-index: 4;
   padding: 60px 20px 0 20px;
@@ -565,11 +560,7 @@ nav {
 
 @media screen and (max-width:2200px) and (min-width:1200px){
   .withtoc{
-    padding-left: 14.5898%;
-  }
-  .withtoc > .container {
-      margin: 0;
-      padding-right: 14.5898%;
+    padding-left: 260px;
   }
 }
 
@@ -763,5 +754,4 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "gitalk";
-
 
