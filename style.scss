@@ -28,7 +28,10 @@ body {
 .container {
   margin: 0 auto;
  /* max-width: 1000px;*/
-  padding: 0 20px;
+  padding-left: 20px;
+/*  padding-right: 14.5898%;*/
+  padding-right: calc(20px + 9.017% + 14.5808%);
+  margin-left: 9.017%;
   width: 100%;
 }
 
@@ -342,7 +345,8 @@ img {
 }
 
 .sidebar {
-  padding: 20px 0;
+  padding-bottom: 20px;
+  padding-top:    14.5898vh;
 
   @include mobile {
     text-align: center;
@@ -351,7 +355,7 @@ img {
 
 .site-info {
   text-align:center;
-  margin: 100px auto 0;
+  margin: 0 auto 0;
 
   @include mobile {
     float: none;
@@ -562,6 +566,10 @@ nav {
 @media screen and (max-width:2200px) and (min-width:1200px){
   .withtoc{
     padding-left: 14.5898%;
+  }
+  .withtoc > .container {
+      margin: 0;
+      padding-right: 14.5898%;
   }
 }
 
