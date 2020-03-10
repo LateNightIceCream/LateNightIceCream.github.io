@@ -270,7 +270,7 @@ img {
   display: block;
   max-width: 100%;
   margin: 0 0 1em;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -507,9 +507,15 @@ nav {
   margin-right: 4px;
 }
 
+.posts img {
+    width: 61.8034%;
+    padding-top:    2em;
+    padding-bottom: 2em;
+
+}
 
 .post {
-
+  
   h1 {
     margin-bottom: .1em;
   }
@@ -523,6 +529,7 @@ nav {
     font-size: 15px;
   }
 }
+
 
 .page {
 //  margin: 40px;
