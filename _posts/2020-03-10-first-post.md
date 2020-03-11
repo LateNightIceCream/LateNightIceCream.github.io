@@ -10,7 +10,7 @@ pinned: true
 ---
 Somewhere on the internet i came across this image:
 
-![img](/assets/img/fibi.png)
+![img]({{ site.baseurl }}/assets/img/fibi.png)
 
 And I wondered if I could recreate this in P5js. 
 Basically, the ratio of the diameters of two successive circles is the _golden ratio_ $\phi$ ! 
@@ -55,6 +55,7 @@ for(var i = n; i>0; i--) {
 
 `pow(-1, i)` simply determines whether to substract or add circleDia/2 to the previous circleX position, making the circle position switch left with right and right with left with each iteration.
 
+## Extra feature!
 I kind of thought of the circles as orbits which is why I decided to add some smaller circles or "planets" which move around in this orbit. The fun part is changing their speeds or colors depending on the orbit's size/position.
 
 ```javascript
@@ -88,4 +89,4 @@ class Orbit {
 }
 ```
 
-(The Full code can be found [here](https://github.com/latenighticecream/orbity))
+(The full code can be found [here](https://github.com/latenighticecream/orbity))
