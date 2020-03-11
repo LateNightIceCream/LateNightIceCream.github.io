@@ -538,6 +538,11 @@ nav {
     padding-top:    2em;
     padding-bottom: 2em;
 
+    @include mobile {
+
+        width: 100%;
+    }
+
 }
 
 .post {
