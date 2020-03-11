@@ -53,7 +53,9 @@ for(var i = n; i>0; i--) {
 }
 ```
 
-`pow(-1, i)` simply determines whether to substract or add circleDia/2 to the previous circleX position, making the circle position switch left with right and right with left with each iteration.
+`pow(-1, i)` simply determines whether to substract or add circleDia/2 to the previous circleX position, making the circle position switch left with right and right with left with each iteration. This is the result:
+![img]({{ site.baseurl }}/assets/img/regular.png)
+
 
 ## Extra feature!
 I kind of thought of the circles as orbits which is why I decided to add some smaller circles or "planets" which move around in this orbit. The fun part is changing their speeds or colors depending on the orbit's size/position.
