@@ -33,6 +33,14 @@ body {
 /*  padding-right: calc(20px + 9.017% + 14.5808%);*/
  /* margin-left: 9.017%;*/
   width: 100%;
+
+  @include mobile {
+
+      padding: 0;
+      width: 100%;
+
+  }
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -450,6 +458,14 @@ nav {
 
   width: 38.1966vw;
 
+  @include mobile {
+
+      width: 100%;
+      padding-left:  9.017vw;
+      padding-right: 9.017vw;
+
+  }
+
   p {
     text-align: justify;
     margin-top: 1.618em;
@@ -588,6 +604,7 @@ nav {
       margin: 0;
       padding-left:  3.4442vw;
 /*      padding-right: 14.5898%;*/
+
   }
 }
 
