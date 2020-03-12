@@ -91,4 +91,8 @@ class Orbit {
 }
 ```
 
+This is the result:
+
+![img]({{ site.baseurl }}/assets/img/orb_0.gif)
+
 (The full code can be found [here](https://github.com/latenighticecream/orbity))
