@@ -3,11 +3,13 @@ layout: post
 title: Recreating this golden-ratio-circle-thing
 date: 2019-06-02
 author: Richard Grünert
-tags: [P5js]
+tags: p5js
 comments: true
 toc: true
+p5js: true
 pinned: true
 ---
+## A bunch of circles
 Somewhere on the internet i came across this image:
 
 ![img]({{ site.baseurl }}/assets/img/grcircles/fibi.png)

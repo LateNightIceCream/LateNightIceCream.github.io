@@ -619,12 +619,16 @@ nav {
   border-top: 1px solid $divider-color;
   font-weight: 300;
   padding: 40px 0;
-  width: 100%;
+/*  width: 100%;*/
+  width: 38.1966vw;
   display: inline-block;
 
   @include mobile {
     font-size: $small-font-size;
-    padding: 24px 0;
+    /*padding: 24px 0;*/
+    width: 81.966vw;
+    margin-left:  9.017vw;
+    margin-right: 9.017vw;
   }
 
   > .prev {
