@@ -21,7 +21,7 @@ $$
 \phi = \frac{1 + \sqrt{5}}{2} \approx 0.618
 $$
 
-In my P5js script I started from the "innermost" circle/"orbit", placing each one with a simple for-loop.
+In my P5js script I started from the "innermost" circle, placing each one with a simple for-loop.
 ```javascript
 // setup
 // n: number of circles
@@ -59,7 +59,7 @@ for(var i = n; i>0; i--) {
 ![img]({{ site.baseurl }}/assets/img/grcircles/regular.png)
 
 
-## Extra feature!
+## Orbit!?
 I kind of thought of the circles as orbits which is why I decided to add some smaller circles or "planets" which move around in this orbit. The fun part is changing their speeds or colors depending on the orbit's size/position.
 
 ```javascript
