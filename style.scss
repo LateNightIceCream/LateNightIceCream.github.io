@@ -374,15 +374,15 @@ img {
     display: block;
     margin: 0 auto;
 
-    margin-top: calc((61.8034vh - (23.6068vh + 3.618em + 6.8884vh)) / 2);
+    margin-top: calc((61.8034vh - (23.6068vh + 1em + 3.4442vh + 1.618em + 3.4442vh + 1em)) / 4);
 
   }
 
   .site-avatar {
     margin:0 auto;
     display: block;
-    width: 38.1966vh;
-    height: 38.1966vh;
+    width: 38.1966%;
+    height: 38.1966%;
 
     @include mobile {
 
