@@ -62,4 +62,22 @@ Here, the position and color of each circle is controlled by the `noise()` (uppe
 A noice property of the `noise(x)` function is that any value x will lead to the same return value no matter when the function is called (in the same program iteration). This is very useful to create periodic but also random behavior e.g. by using the value of `noise()` as the argument of the `sin()` function.
 
 Because the average change in the noise-value for any small change in the argument's value is relatively small compared to e.g. a white noise signal, the function of the Perlin Noise has a very natural feel to it. As explained in the [function reference](https://p5js.org/reference/#/p5/noise), considering smoothness, absolute coordinate values do not matter as much as the relative distance between two coordinates.
+By adjusting the argument so that successive coordinates are close in the noise-space you get this smooth looking but still random progression of y-values:
+![img]({{ site.baseurl }}/assets/img/noise/perlintrace.png)
 
+```javascript
+ ...
+pointsY[i] = height/4+height/2*noise(i*0.01);
+ ...
+```
+
+## Bored of two dimensions?
+Time to go 3D!
+
+## Combining 
+Both the `random()` and the `noise()` function have their specific applications. Here is an example of combining both:
+![img]({{ site.baseurl}}/assets/img/noise/swoosh_0.gif)
+
+The `random()` function is used to assign a y-Position to each of the circles based on their x-Position and the `noise()` function is used in a weird combination with the `sin()` function to change the x-Positions and the colors.
+
+I also found a little optical illusion that when you look at this gif for a while and then at the top image on this page it looks as if the static circles are moving, at least that happened to me ^^.

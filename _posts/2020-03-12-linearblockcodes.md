@@ -10,4 +10,6 @@ pinned: true
 ---
 
 ## Encoding and Decoding
-The task was writing a program to create a linear block code given the number of information bits $m$ and the code length $n$.
+The task was writing a program to create a linear block code given the number of information bits $m$ and the code length $n$. 
+
+This makes for $2^m$ valid codewords out of $2^n$ possible combinations.

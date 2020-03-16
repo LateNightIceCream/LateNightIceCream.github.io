@@ -346,7 +346,7 @@ img {
 
   @include mobile {
     width: 100%;
-    height: auto;
+    height: 61.8034vh;
     padding-bottom: 24px;
     position: relative;
     border-bottom: 1px solid $divider-color;
@@ -359,7 +359,9 @@ img {
   padding-top:    14.5898vh;
 
   @include mobile {
-    text-align: center;
+    text-align:  center;
+    padding-top: auto;
+    padding-bottom: 0;
   }
 }
 
@@ -513,9 +515,10 @@ nav {
 
 
 .pinned .feather-anchor {
-  color: $base-lighten-color;
+/*  color: $base-lighten-color;
   padding: 2px;
-  margin-right: 8px;
+  margin-right: 8px;*/
+    display: none;
 }
 
 
@@ -534,9 +537,9 @@ nav {
 }
 
 .posts img {
-    width: 100%;
-    padding-top:    1em;
-    padding-bottom: 0;
+    width: 61.8034%;
+    padding-top:    1.618em;
+    padding-bottom: 1.618em;
 
     margin: 0 auto;
 
