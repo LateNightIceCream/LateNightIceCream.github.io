@@ -13,3 +13,11 @@ pinned: true
 The task was writing a program to create a linear block code given the number of information bits $m$ and the code length $n$. 
 
 This makes for $2^m$ valid codewords out of $2^n$ possible combinations.
+
+The code is _linear_ because any linear combination of valid codewords will also be a valid codeword and it is a _block_ code because each word or block has the same block length $n$.
+
+```matlab
+A = [1,2,3,4];
+B = [1,2,3,4];
+C = [1,2,3,4];
+```

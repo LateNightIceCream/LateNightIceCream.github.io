@@ -598,18 +598,19 @@ nav {
   left: 23.6068%;
   position: fixed;
   z-index: 4;
-  padding: 60px 20px 0 20px;
+  padding: 0;
+  margin-top: 1.618em;
   overflow-y: auto;
-  
-  &:before{
-    content:"目录";
+
+  /*&:before{
+    content:"";
     margin: 0 0 1em 1em;
     font-weight: 700;
     font-size: 1.2em;
     display: block;
     padding-bottom: 0.6em;
     border-bottom: 3px double $divider-color;
-  }
+  }*/
 
   li:before{
     content:"";
