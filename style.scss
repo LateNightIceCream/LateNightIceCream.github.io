@@ -465,6 +465,8 @@ nav {
   @include mobile {
     float: none;
     width: 100%;
+    padding-left:  9.017vw;
+    padding-right: 9.017vw;
   }
 }
 
@@ -477,8 +479,8 @@ nav {
   @include mobile {
 
       width: 100%;
-      padding-left:  9.017vw;
-      padding-right: 9.017vw;
+      //padding-left:  9.017vw;
+      //padding-right: 9.017vw;
 
   }
 
@@ -486,6 +488,14 @@ nav {
     text-align: justify;
     margin-top: 1.618em;
     margin-bottom: 1.618em;
+  }
+
+  .pinned {
+      .entry {
+
+          display: none;
+
+      }
   }
 
   .tag {
@@ -647,8 +657,8 @@ nav {
     font-size: $small-font-size;
     /*padding: 24px 0;*/
     width: 81.966vw;
-    margin-left:  9.017vw;
-    margin-right: 9.017vw;
+    //margin-left:  9.017vw;
+    //margin-right: 9.017vw;
   }
 
   > .prev {
