@@ -72,7 +72,20 @@ pointsY[i] = height/4+height/2*noise(i*0.01);
 ```
 
 ## Bored of two dimensions?
-Time to go 3D!
+Time to go 3D! For this I arranged some cubes on the x-y-plane and modified their z-position and their color with the noise function. Using the z-position as an argument for the noise function of the colors, you can get a nice repeating color pattern (since each z-position is basically assigned a color value).
+
+```javascript
+...
+posZ = factor * noise(p, k, t);
+
+b = 255*noise(posZ/10);
+r = 255*noise(posZ/10+10);
+...
+```
+p and k are the row and column indices and t is a variable that is incremented by a small amount each frame. Playing around with the `noise()` function for posZ results in very different behavior.
+
+![img]({{ site.baseurl}}/assets/img/noise/3D_1.gif)
+![img]({{ site.baseurl}}/assets/img/noise/3D_2.gif)
 
 ## Combining 
 Both the `random()` and the `noise()` function have their specific applications. Here is an example of combining both:
