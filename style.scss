@@ -11,9 +11,16 @@
 
 // Syntax highlighting @import is at the bottom of this file
 
+ @font-face {
+  font-family: icomoon-feather;
+  src: url({{site.baseurl}}/assets/fonts/icomoon-feather.ttf);
+}
+
 /**************/
 /* BASE RULES */
 /**************/
+
+
 
 html {
   font-size: $base-font-size;

@@ -7,8 +7,7 @@ toc: false
 pinned: true
 ---
 
-Solar tracking is
-[Average solar panel power can be increased by up to 30% using solar tracking methods](https://www.semanticscholar.org/paper/Solar-Tracking-System%3A-More-Efficient-Use-of-Solar-Rizk-Chaiko/5594b5bbb72021eafd8a96452b6bb551d8208094), which is quite a lot!
+Solar panels yield maximum power when the sun is shining perpendicular on their surfaces. For fixed panels (that are oriented properly), this is the case for only a few hours every day. By following the sun using a device called a solar tracker, this duration can be increased. [Average solar panel power can be increased by up to 30% using solar tracking methods](https://www.semanticscholar.org/paper/Solar-Tracking-System%3A-More-Efficient-Use-of-Solar-Rizk-Chaiko/5594b5bbb72021eafd8a96452b6bb551d8208094), which is quite a lot! See also [here](https://en.wikipedia.org/wiki/Solar_tracker#Basic_concept)
 
 I saw a lot of people building little solar tracking devices, often with an arduino and some LDRs as sensors, using the shadows cast on the sensors to determine how much to turn the motors that move the panel. [Here are is an example](https://www.instructables.com/id/Arduino-Solar-Tracker/). There are, of course, some disadvantages using the sensoric approach such as clouds scattering the light, or dirt on the sensors, and general measurement accuracy limitations that all have a negative influence on our tracking capability.
 
@@ -30,7 +29,7 @@ The general implementation idea was:
 
 I 3D printed most of the mechanical parts which worked great and also not so great sometimes. The whole build can be seen in the image below.
 
-Later on in the process I also designed a PCB to hold all the components because I grew tired of all the wires and the flimsy connections to the breadboard.
+Later on in the process I also designed a PCB to hold all the components because I grew tired of all the wires and the flimsy connections to the breadboard. It really just holds all the modules as well as connections for power and motors, an LED for showing the RTC operation, and two simple first order low pass filters for debouncing the limit/home switches. I did make a mistake, though. I connected the _Enable_ pins of the stepper drivers to +5V, which disables them because they are _active low_. An easy workaround was just cutting the respective pins on the carriers off so it does not make a contact. This worked, because _Enable_ is internally pulled low when left open. I also designed the PCB to fit on the bottom of the Launchpad, on top of the female headers.  I don't remember why I did this but I probably had a reason (maybe).
 
 ![img]({{site.baseurl}}/assets/img/solarTracker/breadboard.jpg)
 ![img]({{site.baseurl}}/assets/img/solarTracker/pcb_top_bottom.png)
@@ -48,3 +47,17 @@ As I already said, the steppers and RTC were really easy to interface. The RTC I
 The program execution is almost completely interrupt driven, e.g. by home switch interrupts or timer interrupts. I used the SQ pin on the RTC board, which generates a PWM Signal with the frequency specified in its control register (1 Hz in my case), to keep time and determine the time differences between calculations.
 
 I programmed the tracker into different modes based on the solar elevation. It is in "day mode", i.e. its regular operation, when the solar elevation is greater than -6° above the horizon and in "night mode", i.e. no calculations are performed, when it is below -6°. 
+
+## Possible improvements
+I mean, it works! But it is definetly far from perfect.
+Here is a list of potential improvements:
+* PCB:
+  * Make the PCB go on top of the Launchpad, not the bottom
+  * Label the limit switches on the PCB
+  * Include more status LEDs, such as for motor power, RTC battery, etc.
+  * Give better interface/connections to the motors
+  * Don't pull Enable High
+  * Make the PCB longer to match the length of the Launchpad
+* Put a bigger stepper on the elevation axis
+* Create a better way or interface for setting the date, time and other parameters such as latitude and longitude
+* Cable management :)
