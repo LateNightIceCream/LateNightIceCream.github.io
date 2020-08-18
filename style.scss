@@ -20,18 +20,14 @@ html {
 }
 
 body {
-  font-family: $base-font;
+  font-family: Sans-Serif;
   color: $base-color;
-  line-height: 1.618em;
+  line-height: 1.618;
 }
 
 .container {
   margin: 0 auto;
- /* max-width: 1000px;*/
-  padding-left: calc(20px + 9.017vw);
-/*  padding-right: 14.5898%;*/
-/*  padding-right: calc(20px + 9.017% + 14.5808%);*/
- /* margin-left: 9.017%;*/
+
   width: 100%;
 
   @include mobile {
@@ -50,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 
   @include mobile {
-    line-height: 1.6em;
+    line-height: 1.6;
   }
 }
 
@@ -61,6 +57,7 @@ h1, h2, h3, h5 {
 h1 {
   font-size: 2em;
   margin-bottom: 0;
+  line-height: 1.618em;
   a {
     color: inherit;
   }
@@ -71,7 +68,7 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1.146em;
 }
 
 h4 {
@@ -100,6 +97,10 @@ a {
 
   &:hover, &:active {
     color: $link-lighten-color;
+  }
+
+  &:hover, .nav {
+    color: $link-color;
   }
 }
 
@@ -332,11 +333,15 @@ img {
 // .sidebar
 //
 
+
 .wrapper-sidebar {
-  width: 23.6068%;
+
+  font-family: icomoon-feather;
+
+  width: 60px;
 	-webkit-background-size: cover;
 	background-size: cover;
-	background-color: $background-color;
+	background-color: $bar-background-color;
 	height: 100%;
 	top: 0;
 	left:0;
@@ -346,7 +351,7 @@ img {
 
   @include mobile {
     width: 100%;
-    height: 61.8034vh;
+    height: 60px;
     padding-bottom: 0;
     position: relative;
     border-bottom: 1px solid $divider-color;
@@ -400,7 +405,7 @@ img {
 
 .site-name {
   margin: 0 auto;
-  color: $base-color;
+  color: $name-color;
   cursor: pointer;
   font-family: $base-font;
   font-weight: 700;
@@ -429,29 +434,39 @@ img {
 
 .navlist{
   text-align:center;
+  margin-top: 9.017vh;
+
+  @include mobile {
+    margin-top: 0;
+  }
 }
 
 nav {
-  display: block;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $base-font;
+
+  margin: 0 auto;
+
+  font-family: 'icomoon-feather';
+  display: grid;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.382em;
 
   @include mobile {
-    margin-top: 3.4442vh;
-    font-size: 1.382em;
+    font-size: 1.618em;
+    display: inline-flex;
   }
 
   a {
-    margin: 0 10px;
-    text-align: right;
+    text-align: center;
+    padding-bottom: 20px;
     font-weight: 300;
     letter-spacing: 1px;
 
+    color: $bar-icon-color;
+
     @include mobile {
-      margin: 0 10px;
-      color: $link-color;
+      padding-right:  20px;
+      padding-bottom: 0;
+      margin-top: 10px;
     }
   }
 }
@@ -460,7 +475,11 @@ nav {
 
 .wrapper-content {
   float: right;
-  width: 76.3932vw;
+  width: 100%;
+
+  padding-left: 38.1966vw;
+
+  margin-bottom: 12.36em;
 
   @include mobile {
     float: none;
@@ -603,6 +622,7 @@ nav {
 
 .toc {
 /*  width: 240px;*/
+  display: none;
   width: 14.5898vw;
   height: 100%;
   left: 23.6068%;
@@ -645,57 +665,57 @@ nav {
 
 // pagination
 
-.pagination {
-  border-top: 1px solid $divider-color;
-  font-weight: 300;
-  padding: 40px 0;
-/*  width: 100%;*/
-  width: 38.1966vw;
-  display: inline-block;
+// .pagination {
+//   border-top: 1px solid $divider-color;
+//   font-weight: 300;
+//   padding: 40px 0;
+//  width: 100%;
+//   width: 38.1966vw;
+//   display: inline-block;
 
-  @include mobile {
-    font-size: $small-font-size;
-    /*padding: 24px 0;*/
-    width: 81.966vw;
-    //margin-left:  9.017vw;
-    //margin-right: 9.017vw;
-  }
+//   @include mobile {
+//     font-size: $small-font-size;
+//     padding: 24px 0;
+//     width: 81.966vw;
+//     margin-left:  9.017vw;
+//     margin-right: 9.017vw;
+//   }
 
-  > .prev {
-    float: left;
-    width: 50%;
-    a {
-      color: $base-lighten-color;
-      border: 1px solid $divider-color;
-      padding: 10px 20px;
-      background: $background-color;
+//   > .prev {
+//     float: left;
+//     width: 50%;
+//     a {
+//       color: $base-lighten-color;
+//       border: 1px solid $divider-color;
+//       padding: 10px 20px;
+//       background: $background-color;
 
-      &:hover, &:focus {
-        color: $link-lighten-color;
-        border: 1px solid $link-lighten-color;
-        background-color: $link-bghv-color;
-      }
-    }
-  }
+//       &:hover, &:focus {
+//         color: $link-lighten-color;
+//         border: 1px solid $link-lighten-color;
+//         background-color: $link-bghv-color;
+//       }
+//     }
+//   }
 
-  > .next {
-    float: right;
-    text-align: right;
-    width: 50%;
-    a {
-      color: $base-lighten-color;
-      border: 1px solid $divider-color;
-      padding: 10px 20px;
-      background: $background-color;
+//   > .next {
+//     float: right;
+//     text-align: right;
+//     width: 50%;
+//     a {
+//       color: $base-lighten-color;
+//       border: 1px solid $divider-color;
+//       padding: 10px 20px;
+//       background: $background-color;
 
-      &:hover, &:focus {
-        color: $link-lighten-color;
-        border: 1px solid $link-lighten-color;
-        background-color: $link-bghv-color;
-      }
-    }
-  }
-}
+//       &:hover, &:focus {
+//         color: $link-lighten-color;
+//         border: 1px solid $link-lighten-color;
+//         background-color: $link-bghv-color;
+//       }
+//     }
+//   }
+// }
 
 // Archive
 .archive {
@@ -763,14 +783,19 @@ nav {
 
 // Footer
 .wrapper-footer-desktop {
+
   margin-top: 50px;
-  border-top: 1px solid $footer-border-color;
   background-color: $footer-background-color;
   position: absolute;
   clear:both;
   width:100%;
   bottom:0;
-  
+
+  font-family: icomoon-feather;
+
+  color: $footer-foreground-color;
+
+
   @include mobile {
     display: none;
   }
@@ -781,7 +806,7 @@ nav {
   display: none;
   
   @include mobile {
-    display: block;
+    display: none;
     width: 100%;
     border-top: 1px solid $footer-border-color;
     background-color: $footer-background-color;
@@ -838,6 +863,3 @@ footer {
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
-@import "gitalk";
-
-

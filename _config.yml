@@ -20,29 +20,29 @@
 name:        Richard Grünert
 description: EE student from Germany
 
-avatar: https://66.media.tumblr.com/29a24d7907388a65f39edc69ddd33a37/tumblr_nb6t3fgH9v1txe8seo1_500.gifv
+#avatar: https://66.media.tumblr.com/29a24d7907388a65f39edc69ddd33a37/tumblr_nb6t3fgH9v1txe8seo1_500.gifv
+avatar: /assets/img/avatar/avatar.jpg
 
 baseurl: ""
 
 #footer-text: yay
 navigation:
-  - name: <ion-icon name="planet-outline"></ion-icon>
+  - name:  
+  # name: #<ion-icon name="planet-outline"></ion-icon>
     url: /
-  - name: <ion-icon name="information-outline"></ion-icon>
+  - name: 
     url: /about
-#  - name: <ion-icon name="cube-outline"></ion-icon>
-  - name: <ion-icon name="library-outline"></ion-icon>
+  - name: 
     url: /archive
-  - name: <ion-icon name="pricetags-outline"></ion-icon>
-    url: /tags
+  - name: 
+    url: https://github.com/latenighticecream
 
-paginate: 8
+#paginate: 8
 excerpt_separator: <!-- more -->
 footer-links:
-  github: LateNightIceCream
   email:  richardgruenert@live.com
 
-title: Your awesome title
+title: Richard Grünert
 
 #paginate_path: /page:num/
 

@@ -19,30 +19,35 @@ $gray: #666;
 $lightGray: #eee;
 $white: #fff;
 
-// Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
-
 // Fonts
-$base-font: "Noto Serif","PT Serif",source-han-serif-sc, "Source Han Serif SC", "Source Han Serif CN", "Source Han Serif TC", "Source Han Serif TW", "Source Han Serif","Songti SC", SimSon, serif;
-$code-font: 'Menlo', 'Courier New', 'Monaco', 'Spoqa Han Sans', monospace;
+$base-font: 'Sans-Serif';
+$code-font: monospace;
+
 
 // Font sizes
 $base-font-size: 16px;
 $small-font-size: 14px;
 
 // Colors
-$base-color: $oc-gray-8;
+$accent-color: $oc-yellow-6;
+$accent-color-darker: $oc-yellow-8;
+
+$base-color: $oc-gray-9;
 $base-lighten-color: $oc-gray-6;
 $base-lightener-color: $oc-gray-4;
 
-$background-color: $oc-gray-0;
-$background-lighten-color: hsla(210, 17%, 98%, 0.42);
+$name-color: $oc-gray-6;
+
+$background-color: $oc-gray-9;
+$background-lighten-color: $oc-gray-2;
+
+$bar-background-color: $oc-gray-0;
+$bar-icon-color:       $oc-gray-6;
+$bar-icon-hover-color: $accent-color;
 
 $text-color: $base-color;
-$link-color: $oc-teal-8;
-$link-lighten-color: $oc-teal-6;
+$link-color: $accent-color;
+$link-lighten-color: $accent-color-darker;
 $link-bghv-color: $oc-teal-0;
 $divider-color: $oc-gray-1;
 
@@ -58,13 +63,15 @@ $footnote-link-border-color: $oc-gray-1;
 $footnote-link-background-over-color: $oc-gray-1;
 
 // $selection-color: $oc-black;
-$selection-background-color: $oc-gray-3;
+// highlight color
+$selection-background-color: $oc-yellow-1;
 
 $tag-index-label-background-color: $oc-gray-2;
 $tag-index-count-background-color: hsla(210, 7%, 56%, 0.102);
 
-$footer-border-color: $oc-gray-2;
-$footer-background-color: $oc-gray-0;
+$footer-border-color: $oc-gray-9;
+$footer-background-color: $bar-background-color;
+$footer-foreground-color: $oc-gray-9;
 
 // List
 $li-bottom-space: 0.4em;

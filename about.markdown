@@ -4,6 +4,7 @@ title: About
 permalink: /about/
 ---
 
-To be added.
+To be added. 
+[](mailto:richardgruenert@live.com)
 
 [jekyll-organization]: https://github.com/jekyll

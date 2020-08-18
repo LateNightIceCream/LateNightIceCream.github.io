@@ -5,7 +5,7 @@ date: 2019-06-02
 author: Richard Grünert
 tags: p5js
 comments: true
-toc: true
+toc: false
 p5js: true
 pinned: true
 ---

@@ -5,7 +5,6 @@ date: 2020-03-12
 author: Richard Grünert
 tags: Octave
 comments: true
-toc: true
 pinned: true
 ---
 

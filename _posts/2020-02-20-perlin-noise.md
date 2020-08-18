@@ -4,9 +4,8 @@ title: p5js Perlin Noise
 date: 2020-02-20
 author: Richard Grünert
 tags: p5js
-comments: true
-toc: true
-p5js: true
+comments: false
+toc: false
 pinned: true
 ---
 
@@ -86,11 +85,3 @@ p and k are the row and column indices and t is a variable that is incremented b
 
 ![img]({{ site.baseurl}}/assets/img/noise/3D_1.gif)
 ![img]({{ site.baseurl}}/assets/img/noise/3D_2.gif)
-
-## Combining 
-Both the `random()` and the `noise()` function have their specific applications. Here is an example of combining both:
-![img]({{ site.baseurl}}/assets/img/noise/swoosh_0.gif)
-
-The `random()` function is used to assign a y-Position to each of the circles based on their x-Position and the `noise()` function is used in a weird combination with the `sin()` function to change the x-Positions and the colors.
-
-I also found a little optical illusion that when you look at this gif for a while and then at the top image on this page it looks as if the static circles are moving, at least that happened to me ^^.
