@@ -75,7 +75,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.146em;
+  font-size: 1em;
 }
 
 h4 {
@@ -505,14 +505,12 @@ nav {
   @include mobile {
 
       width: 100%;
-      //padding-left:  9.017vw;
-      //padding-right: 9.017vw;
 
   }
 
   p {
     text-align: justify;
-    margin-top: 1.618em;
+    margin-top: 0;
     margin-bottom: 1.618em;
   }
 
@@ -606,7 +604,6 @@ nav {
     margin-bottom: .1em;
   }
 
-
   .comments {
     margin-top: 10px;
   }
@@ -614,6 +611,11 @@ nav {
   .read-more {
     font-size: 15px;
   }
+
+}
+
+.meta {
+  margin-bottom: 2.36em;
 }
 
 

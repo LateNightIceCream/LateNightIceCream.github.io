@@ -15,7 +15,7 @@ But what if we didn't have to rely on sensors to determine the sun's position an
 
 Luckily, some nice astronomy-people have figured that one out already! There are different algorithms for calculating the solar position by date and the one I used for my project is called the [Solar Position Algorithm](https://midcdmz.nrel.gov/spa/) (SPA). It's pretty much a black box for me. Time and date in, azimuth and elevation of the sun out. It is even available as a C-Program from the same publisher, which made it especially easy to implement on the MSP430. 
 
-The general implementation idea was: 
+The general implementation idea: 
 1. Use an RTC to get the current date and time 
 1. Input it to the SPA
 1. Control two motors, setting azimuth and elevation of a panel
