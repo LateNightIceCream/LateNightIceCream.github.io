@@ -48,6 +48,8 @@ The program execution is almost completely interrupt driven, e.g. by home switch
 
 I programmed the tracker into different modes based on the solar elevation. It is in "day mode", i.e. its regular operation, when the solar elevation is greater than -6° above the horizon and in "night mode", i.e. no calculations are performed, when it is below -6°. 
 
+The whole program can be found on [github](https://github.com/latenighticecream/SolarTracker).
+
 ## Possible improvements
 I mean, it works! But it is definetly far from perfect.
 Here is a list of potential improvements:
