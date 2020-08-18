@@ -5,7 +5,7 @@ date: 2020-03-12
 author: Richard Grünert
 tags: Octave
 comments: true
-pinned: true
+pinned: false
 ---
 
 [Full Code](https://github.com/LateNightIceCream/Informationsuebertragung/blob/master/Homework%20I/ha.m)
