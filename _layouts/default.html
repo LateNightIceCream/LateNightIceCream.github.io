@@ -1,32 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  {% include head.html %}
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+  </head>
   <body>
-    {% include nav.html %}
 
-    {% if page.toc==true %}
-      <aside class="toc">
-        {% include toc.html html=content %}
-      </aside>
-    {% endif %}
+    <div class="navcontainer">
+    {% include navigation.html %}
+    </div>
 
-    <div id="main" role="main" class="wrapper-content">
-      <div class="container">
-        {{ content }}
-      </div>
+    <div class="content">
+    {{ content }}
     </div>
 
   </body>
-
-  {% if page.toc==true %}
-  <script>
-    document.getElementById("main").classList.add("withtoc");
-  </script>
-  {% endif %}
-
-  <div class="wrapper-footer-mobile">
-    <footer class="footer">
-      {% include footer.html %}
-    </footer>
-
 </html>
