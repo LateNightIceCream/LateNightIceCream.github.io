@@ -8,6 +8,7 @@ author:
   name:         理查德
   url:          latenighticecream.github.io
   email:
+  profilepic:   /assets/images/profile.jpg
 
 # Build settings
 markdown:       kramdown
