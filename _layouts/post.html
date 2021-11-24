@@ -3,7 +3,14 @@ layout: default
 ---
 
 <div class="post">
-  <div class="post-info">
+
+  {% if page.titleimage %}
+  <div style = "background-image:url({{ page.titleimage }});" id = "post-title-image">
+    <!-- <img src={{ page.titleimage }}/> -->
+  </div>
+  {% endif %}
+
+  <div class="post-info" {% if page.titleimage %} style="padding-top: 16px" {% endif %}>
     <span>Written by</span>
     {% if page.author %}
         {{ page.author }}
@@ -15,10 +22,26 @@ layout: default
       <br>
       <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
     {% endif %}
+
+  <div class = "tags-clouds">
+      {% for tag in page.tags %}
+      <a href="#{{ tag }}">{{ tag }}</a>
+      {% endfor %}
   </div>
 
+
+    </div>
+
   <h1 class="post-title">{{ page.title }}</h1>
+
+  {% if page.description %}
+    <h2 class="post-description">{{ page.description }}</h2>
+  {% endif %}
+
+
+
   <div class="post-line"></div>
+
 
   {{ content }}
 </div>
