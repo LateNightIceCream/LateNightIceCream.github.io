@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>Installing qucs on and Ubuntu based systems</title>
+  <meta name="description" content="Here’s how to install qucs on Linux Mint: Follow the tutorial on the qucs github repo Install dependencies sudo apt install adms automake build-essential libtool libtool-bin gperf flex bison pkg-config libqt4-dev libqt4-qt3support If this error comes up: E: Package &#39;libqt4-dev&#39; has no installation candidate E: Unable to locate package libqt4-qt3support use this fix: sudo add-apt-repository ppa:rock-core/qt4 sudo apt update sudo apt install qt4-dev-tools libqt4-dev libqtcore4 libqtgui4 Then, if this error comes when running make: rcc: could not exec &#39;/usr/lib/qt5/bin/rcc&#39;: No such file or directory Install this: sudo apt install qt5-default">
+  
+
+  <link rel="stylesheet" href="/posts/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/posts/2022/04/29/linux-qucs-install/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Li&#39;s Blog" href="http://localhost:4000/posts/feed.xml">
+
+  
+
+  <meta property="og:title" content="Installing qucs on and Ubuntu based systems">
+  <meta property="og:site_name" content="Li&#39;s Blog">
+  <meta property="og:url" content="http://localhost:4000/posts/2022/04/29/linux-qucs-install/">
+  <meta property="og:description" content="Here’s how to install qucs on Linux Mint: Follow the tutorial on the qucs github repo Install dependencies sudo apt install adms automake build-essential libtool libtool-bin gperf flex bison pkg-config libqt4-dev libqt4-qt3support If this error comes up: E: Package &#39;libqt4-dev&#39; has no installation candidate E: Unable to locate package libqt4-qt3support use this fix: sudo add-apt-repository ppa:rock-core/qt4 sudo apt update sudo apt install qt4-dev-tools libqt4-dev libqtcore4 libqtgui4 Then, if this error comes when running make: rcc: could not exec &#39;/usr/lib/qt5/bin/rcc&#39;: No such file or directory Install this: sudo apt install qt5-default">
+
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/posts/">Li&#39;s Blog</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/posts/about/">About</a>
+      
+        
+        <a class="page-link" href="/posts/archives/">Archives</a>
+      
+        
+        <a class="page-link" href="https://github.com/yous/whiteglass">GitHub</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    
+      <h1 class="post-title" itemprop="name headline">Installing qucs on and Ubuntu based systems</h1>
+    
+    <p class="post-meta"><time datetime="2022-04-29T00:00:00+00:00" itemprop="datePublished">Apr 29, 2022</time>
+
+ •
+  
+    
+    
+      
+    
+      
+        <a href="/posts/tags/linux/">Linux</a>,
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+    
+      
+        <a href="/posts/tags/electronics/">Electronics</a>,
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+    
+      
+    
+      
+    
+      
+        <a href="/posts/tags/qucs/">qucs</a>
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Here’s how to install qucs on Linux Mint:</p>
+
+<ol>
+  <li>Follow the tutorial on the <a href="https://github.com/Qucs/qucs">qucs github repo</a>
+Install dependencies
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install adms automake build-essential libtool libtool-bin gperf flex bison pkg-config libqt4-dev libqt4-qt3support
+</code></pre></div>    </div>
+    <p>If this error comes up:</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>E: Package 'libqt4-dev' has no installation candidate
+E: Unable to locate package libqt4-qt3support
+</code></pre></div>    </div>
+    <p>use <a href="https://askubuntu.com/questions/1274134/cannot-install-qt-4-on-ubuntu-20-04-quite-universal-circuit-simulator-qucs">this fix</a>:</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo add-apt-repository ppa:rock-core/qt4
+sudo apt update
+sudo apt install qt4-dev-tools libqt4-dev libqtcore4 libqtgui4
+</code></pre></div>    </div>
+    <p>Then, if this error comes when running <code class="language-plaintext highlighter-rouge">make</code>:</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rcc: could not exec '/usr/lib/qt5/bin/rcc': No such file or directory
+</code></pre></div>    </div>
+    <p>Install this:</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install qt5-default
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+  </div>
+
+  
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      <!--  -->
+<!--  -->
+<!-- &copy; Me - Powered by <a href="https://jekyllrb.com">Jekyll</a> &amp; <a href="https://github.com/yous/whiteglass">whiteglass</a> - Subscribe via <a href="http://localhost:4000/posts/feed.xml">RSS</a> -->
+
+&#x1104D
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
