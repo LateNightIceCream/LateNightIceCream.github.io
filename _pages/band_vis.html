@@ -1,0 +1,46 @@
+<head>
+
+</head>
+
+<body>
+
+  <noscript>
+      <p id = "js_warning">JavaScript has to be activated for this to work<p>
+  </noscript>
+
+  Choose your Band from default list:
+  <select name="default_bands" id="default_bands_selector">
+    <option value="default_lte">LTE</option>
+    <option value="default_gsm">GSM</option>
+    <option value="default_gprs">GPRS</option>
+  </select>
+
+  <form method="post" enctype="multipart/form-data">
+  <div>
+    <label for="csv_upload">Choose file to upload</label>
+    <input type="file" id="csv_upload" name="csv_upload" accept=".csv, .txt">
+  </div>
+  <!-- <div> -->
+  <!--   <button>Submit</button> -->
+  <!-- </div> -->
+  </form>
+
+
+  <div id="checkbox_container">
+  </div>
+
+  <p class="content"></p>
+
+  <div style="background-color:lightgray;", class = "debug">
+  </div>
+
+  <div style="background-color:lightgray", id="note">
+    <h4>Note</h4>
+    Only works with comma-separated csv files of form band1_name, band1_lower, band1_upper\n band2_name, band2_lower, band2_upper\n...
+  </div>
+
+</body>
+
+<script src="common.js"></script>
+<script src="bandLoader.js"></script>
+<script src="bandDisplay.js"></script>

@@ -1,0 +1,157 @@
+<head>
+
+</head>
+
+<body>
+
+<noscript>
+    <p id = "js_warning">JavaScript has to be activated for this to work<p>
+</noscript>
+
+Choose your Band from default list:
+<select name="default_bands" id="default_bands_selector">
+  <option value="default_lte">LTE</option>
+  <option value="default_gsm">GSM</option>
+  <option value="default_gprs">GPRS</option>
+</select>
+
+<form method="post" enctype="multipart/form-data">
+ <div>
+   <label for="csv_upload">Choose file to upload</label>
+   <input type="file" id="csv_upload" name="csv_upload" accept=".csv, .txt">
+ </div>
+ <!-- <div> -->
+ <!--   <button>Submit</button> -->
+ <!-- </div> -->
+</form>
+
+
+<div id="checkbox_container">
+</div>
+
+<p class="content"></p>
+
+</body>
+
+<script type="text/javascript">
+
+  const defaultList = document.getElementById('default_bands_selector');
+  const defaultFilePath = '/assets/'
+  const input   = document.querySelector('input');
+  const preview = document.querySelector('.preview');
+  let bands = [];
+
+  // let testbands = [];
+  // for (var i = 0; i < 5; i++) {
+  //     testbands.push(new Band("B" + i, 11, 12));
+  // }
+
+  // displayBandCheckboxes(testbands);
+  input.addEventListener('change', onFileSelected);
+  defaultList.addEventListener('change', onDefaultSelected);
+
+  onDefaultSelected();
+  
+  function Band (name, f_upper, f_lower) {
+      this.name    = name;
+      this.f_upper = f_upper;
+      this.f_lower = f_lower;
+  }
+
+  function loadDefaultFile (url) {
+      fetch(url).then(response => {
+          if (!response.ok) {
+              const err = new Error('Could not get file ' + url);
+              err.response = response;
+              throw err;
+          }
+          return response.blob();
+      }).then(blobFile => {
+          loadBandsFromFile(new File([blobFile], "beans"))
+      }).catch(err => {
+          console.log(err);
+          console.log(err.response);
+      });
+  }
+
+  function onFileSelected () {
+
+      const curFiles = input.files;
+      //console.log("file selected");
+
+      if (curFiles.length === 0) {
+          return;
+      }
+
+      const file = curFiles[0];
+      console.log(file);
+      loadBandsFromFile(file);
+  }
+
+  function onDefaultSelected () {
+      //console.log('file: ' + defaultList.value + '.csv');
+      const file = getDefaultFilePath(defaultList.value);
+      loadDefaultFile(file);
+  }
+
+  function getDefaultFilePath (name) {
+      return defaultFilePath + name + '.csv';
+  }
+
+  function loadBandsFromFile (file) {
+
+      if (!file) {
+          return;
+      }
+
+      const reader = new FileReader();
+      reader.addEventListener("load", () => {
+          // done loading file
+          document.querySelector('.content').innerText = reader.result;
+          
+          // returns band objects
+          let csv_bands = parseCsv(reader.result);
+
+          if (!"csv ok") {
+              return;
+          }
+
+          displayBandCheckboxes(csv_bands);
+          
+      }, false);
+
+      reader.readAsText(file);
+  }
+
+  function displayBandCheckboxes (bands) {
+      const checkboxContainer = document.getElementById("checkbox_container");
+
+      bands.forEach(band => {
+          let checkbox = document.createElement("INPUT");
+          let label    = document.createElement("LABEL");
+
+          let cb_name = "checkbox_band_" + band.name;
+          checkbox.setAttribute("type", "checkbox"); 
+          checkbox.setAttribute("name", cb_name); 
+          checkbox.setAttribute("id",   cb_name); 
+
+          label.setAttribute("for", cb_name);
+          label.innerHTML = band.name;
+
+          checkboxContainer.append(checkbox);
+          checkboxContainer.append(label);
+      });
+  }
+
+  // next up:::
+  function parseCsv () {
+      // keine dopplungen
+      // keine negativen werte
+      return false;
+  }
+
+  function js_check () {
+      
+  }
+  
+</script>>
