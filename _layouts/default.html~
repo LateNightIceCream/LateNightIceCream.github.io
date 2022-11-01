@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/sakura.css", type="text/css">
+    <link rel="stylesheet" href="/assets/css/sakura.css">
   </head>
   <body>
     {% include navigation.html %}
