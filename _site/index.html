@@ -1,107 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta name="generator" content="pandoc" />
-  <title>sakura: a minimal classless css framework / theme</title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="/assets/css/sakura.css" type="text/css" />
-</head>
-<body>
-<h1 id="sakura-a-minimal-classless-css-framework-theme."><a href="https://oxal.org/projects/sakura">sakura</a>: a minimal <strong><em>classless</em></strong> css <em>framework</em> / <strong>theme</strong>.</h1>
-<p>[Go to <a href="https://github.com/oxalorg/sakura">Github repository</a>]</p>
-<div class="figure">
-<img src="sakura160.jpg" alt="The cherry blossoms" />
-<p class="caption">The cherry blossoms</p>
-</div>
-<blockquote>
-<p>The perfect blossom is a rare thing. You could spend your life looking for one, and it would not be a wasted life</p>
-</blockquote>
-<p>Just drop in <code>sakura.css</code> to any webpage and go from ugly looking 1900's website to a pretty modern website in literally 0 seconds.</p>
-<p>Easy to customize and build on top of sakura.</p>
-<p>Sakura supports extremely easy theming support using variables for duotone color scheming. Comes with several existing themes, can be found in the <code>css</code> folder of this repository.</p>
-<h2 id="demo">Demo</h2>
-<p>Compare a live page <strong>WITH</strong> and <strong>WITHOUT</strong> sakura.</p>
-<ul>
-<li><a href="https://oxal.org/projects/sakura/demo" class="uri">https://oxal.org/projects/sakura/demo</a></li>
-</ul>
-<h2 id="bookmark">Bookmark</h2>
-<p>Don't want to develop using sakura, but instead want to use it on websites with outdated 90's design (i.e. no css)?</p>
-<p>If so, enable sakura on any website using the following instructions:</p>
-<ul>
-<li><a href="https://oxal.org/projects/sakura/bookmark" class="uri">https://oxal.org/projects/sakura/bookmark</a></li>
-</ul>
-<h2 id="why---reasons-to-use-sakura">Why? - Reasons to use sakura</h2>
-<p>How exactly does sakura help you? I had a discussion about this on the <a href="https://www.reddit.com/r/webdev/comments/68zpdp/sakura_a_minimal_classless_css_theme_just_drop_it/">reddit thread</a></p>
-<ul>
-<li>Just drop in, even on existing HTML content, to get a pretty looking website (everything <em>&quot;just works&quot;</em>)</li>
-<li>Quick prototyping, especially when working on backend sites and can't yet be bothered to fidget with css/html</li>
-<li>Building a quick (but pretty) site/blog for your best friend or aunt!</li>
-<li>No need to remember tons of different class names for every other css framework</li>
-<li>Works amazingly with markdown generated HTML pages (eliminates the need of hacks like including <code>.img img-responsive</code> in markdown-parser generated <code>&lt;img&gt;&lt;/img&gt;</code> tags</li>
-<li>Wonderful for people not really good or interested with design as sakura is nothing but a set of reasonable defaults</li>
-</ul>
-<h2 id="installation">Installation</h2>
-<p><strong>Manually</strong> (<em>recommended</em>):</p>
-<ol style="list-style-type: decimal">
-<li><p>Download the file:</p>
-<pre><code>wget &quot;https://raw.githubusercontent.com/oxalorg/sakura/master/css/sakura.css&quot;</code></pre>
-<p><strong>OR</strong> download directly: <a href="https://raw.githubusercontent.com/oxalorg/sakura/master/css/sakura.css">sakura.css</a></p></li>
-<li><p>Link it from html:</p>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;sakura.css&quot; type=&quot;text/css&quot;&gt;</code></pre></li>
-</ol>
-<p><strong>CDN</strong>:</p>
-<ol style="list-style-type: decimal">
-<li><p>Simply add this in your <code>&lt;head&gt;</code> tag.</p>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/sakura.css/css/sakura.css&quot; type=&quot;text/css&quot;&gt;</code></pre></li>
-</ol>
-<p><strong>(Optional)</strong> <em>but recommended</em> to use <a href="https://github.com/necolas/normalize.css/">normalize.css</a> to reset <em>before</em> using sakura.</p>
-<h2 id="sites-using-sakura">Sites using Sakura</h2>
-<ul>
-<li><a href="http://computableverse.com" class="uri">http://computableverse.com</a></li>
-<li><a href="http://owlofathena.com" class="uri">http://owlofathena.com</a></li>
-</ul>
-<p><strong><em>If you're using sakura, please let me know or make a pull request adding in your name. I would be super happy!! <code>^_^</code></em></strong></p>
-<h2 id="theming">Theming</h2>
-<p>You can make your own themes by overriding some variables for colors.</p>
-<p>Here is an example file: <code>./scss/sakura-earthly.scss</code>:</p>
-<pre><code>/* Duotone color scheming:
-   Uses blossom as the revealing/stark color
-   Uses fade as the more prominent color
-*/
-$color-blossom: #338618;
-$color-fade: #5e5e5e;
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/assets/css/sakura.css", type="text/css">
+  </head>
+  <body>
+    <nav>
+  
+</nav>
 
-/* bg color is used for the background of the page
-   bg-alt is used for code-blocks etc
-*/
-$color-bg: #f9f9f9;
-$color-bg-alt: #C7E3BE;
+    <h1>hello world!</h1>
+<h2>yeah</h2>
 
-/* color of all the text on the page */
-$color-text: #4a4a4a;
-$font-size-base: 1.8rem;
+<p>
+According to all known laws of aviation, there is no way a bee should be able to fly.
+Its wings are too small to get its fat little body off the ground.
+The bee, of course, flies anyway because bees don't care what humans think is impossible.
+Yellow, black. Yellow, black. Yellow, black. Yellow, black.
+Ooh, black and yellow!
+Let's shake it up a little.
+Barry! Breakfast is ready!
+Coming!
+Hang on a second.
+Hello?
+Barry?
+Adam?
+Can you believe this is happening?
+I can't.
+I'll pick you up.
+Looking sharp.
+Use the stairs, Your father paid good money for those.
+Sorry. I'm excited.
+Here's the graduate.
+We're very proud of you, son.
+A perfect report card, all B's.
+Very proud.
+Ma! I got a thing going here.
+You got lint on your fuzz.
+Ow! That's me!
+Wave to us! We'll be in row 118,000.
+Bye!
+</p>
 
-@import &quot;main&quot;;</code></pre>
-<h2 id="contributors">Contributors</h2>
-<ul>
-<li>Bookmarklet was added by <span class="citation">@Zhouzi</span></li>
-<li>The image is credited to <a href="https://pixabay.com/en/users/Deedster-2541644/">Deedster</a></li>
-</ul>
-<h2 id="share-some-3">Share some &lt;3</h2>
-<blockquote>
-<p>Between our two lives there is also the life of the cherry blossom. - <em>Basho Matsuo</em></p>
-</blockquote>
-<p>Please leave a star :)</p>
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
- (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
- m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
- })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-63732371-1', 'auto');
-ga('send', 'pageview');
-</script>
-</body>
+  </body>
 </html>

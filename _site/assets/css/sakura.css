@@ -6,15 +6,15 @@
 /* Body */
 html {
   font-size: 62.5%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
+  font-family: serif; }
 
 body {
   font-size: 1.8rem;
   line-height: 1.618;
   max-width: 38em;
   margin: auto;
-  color: #4a4a4a;
-  background-color: #f9f9f9;
+  color: #f9f9f9;
+  background-color: #0b1000;
   padding: 13px; }
 
 @media (max-width: 684px) {
@@ -27,17 +27,24 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  color: #ffffff;
+  font-family: serif;
   font-weight: 700;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
   overflow-wrap: break-word;
   word-wrap: break-word;
   -ms-word-break: break-all;
-  word-break: break-word; }
+  word-break: break-word;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  padding-left: 16px;
+}
 
 h1 {
-  font-size: 2.35em; }
+  border: none;
+  font-size: 6em;
+}
 
 h2 {
   font-size: 2.00em; }
@@ -56,7 +63,10 @@ h6 {
 
 p {
   margin-top: 0px;
-  margin-bottom: 2.5rem; }
+  margin-bottom: 2.5rem;
+  padding: 16px;
+  /* border: 1px solid #ffffff; */
+}
 
 small, sub, sup {
   font-size: 75%; }
