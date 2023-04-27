@@ -1,0 +1,23 @@
+<a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+  <div class= "catalogue-item-container">
+
+    <div class="catalogue-item-column-1">
+      <img class= "post-picture" src={{ post.picture }}>
+    </div>
+
+    <div class="catalogue-item-column-2">
+      <h2 class="catalogue-title">{{ post.title }}</h2>
+      <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+      <div class="catalogue-line"></div>
+
+      <p>
+        {% if post.excerpt_separator %}
+          {{ post.excerpt | strip_html }}
+        {% else %}
+          {{ post.content | strip_html | truncatewords: 16 }}
+        {% endif %}
+      </p>
+    </div>
+
+  </div>
+</a>

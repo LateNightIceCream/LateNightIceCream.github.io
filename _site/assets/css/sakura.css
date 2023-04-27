@@ -4,18 +4,27 @@
  * Project: https://github.com/oxalorg/sakura/
  */
 /* Body */
+@font-face {
+  font-family: "SmileySans-Oblique";
+  /* src: url("../fonts/smiley-sans/SmileySans-Oblique.ttf"); */
+  src: url("../fonts/GenYoMin-R.ttc");
+}
+
 html {
   font-size: 62.5%;
-  font-family: serif; }
+  /* font-family: serif;} */
+  font-family: serif;
+}
 
 body {
   font-size: 1.8rem;
   line-height: 1.618;
   max-width: 38em;
   margin: auto;
-  color: #f9f9f9;
+  color: #ffffff;
   background-color: #0b1000;
-  padding: 13px; }
+  padding: 13px;
+}
 
 @media (max-width: 684px) {
   body {
@@ -23,7 +32,9 @@ body {
 
 @media (max-width: 382px) {
   body {
-    font-size: 1.35rem; } }
+    font-size: 1.35rem;
+
+  } }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
@@ -41,13 +52,34 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 16px;
 }
 
+#main-container {
+  background-color: #0b1000;
+}
+
+#main-content {
+}
+
+.p-left {
+}
+
+.p-right {
+}
+
+
+#title-h1 {
+}
+
 h1 {
-  border: none;
+  border-bottom: 4px dashed white;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  object-fit: contain;
   font-size: 6em;
 }
 
 h2 {
-  font-size: 2.00em; }
+  font-size: 2.00em;
+}
 
 h3 {
   font-size: 1.75em; }
@@ -76,12 +108,11 @@ hr {
 
 a {
   text-decoration: none;
-  color: #1d7484; }
-  a:hover {
-    color: #982c61;
-    border-bottom: 2px solid #4a4a4a; }
-  a:visited {
-    color: #144f5a; }
+}
+a:hover {
+}
+a:visited {
+}
 
 ul {
   padding-left: 1.4em;
@@ -113,7 +144,8 @@ img {
 
 /* Pre and Code */
 pre {
-  background-color: #f1f1f1;
+  border: 1px dashed white;
+  background-color: #0b1000;
   display: block;
   padding: 1em;
   overflow-x: auto;
@@ -123,7 +155,6 @@ pre {
 code {
   font-size: 0.9em;
   padding: 0 0.5em;
-  background-color: #f1f1f1;
   white-space: pre-wrap; }
 
 pre > code {
@@ -192,3 +223,34 @@ label, legend, fieldset {
   display: block;
   margin-bottom: .5rem;
   font-weight: 600; }
+
+.catalogue-item {
+
+}
+
+.catalogue-item:hover {
+
+}
+
+.catalogue-title:hover {
+  background-color: white;
+  color:#0b1000;
+}
+
+.catalogue-time {
+  padding-left: 16px;
+  color: white;
+}
+
+.catalogue-line {
+  color: white;
+}
+
+
+.catalogue-line:visited {
+  color: white;
+}
+
+.catalogue-item-column-2 {
+  color: white;
+}
